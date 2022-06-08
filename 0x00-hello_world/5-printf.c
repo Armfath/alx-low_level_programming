@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
 * main - Principal function
+* Return: 0
 */
 int main(void)
 {
