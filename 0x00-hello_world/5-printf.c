@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-*Output using printf
+* main - Principal function
 */
 int main(void)
 {
