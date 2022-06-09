@@ -22,16 +22,16 @@ void times_table(void)
 			}
 			else
 				_putchar((m % 10) + '0');
-			if (i < 9 && m < 10)
+			if (i < 9)
 			{
 				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-			}
-			else if (i < 9 && m > 9)
-			{
-				_putchar(',');
-				_putchar(' ');
+				if (m < 9)
+				{
+					_putchar(' ');
+					_putchar(' ');
+				}
+				else
+					_putchar(' ');
 			}
 		}
 		_putchar('\n');
