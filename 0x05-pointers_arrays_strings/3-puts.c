@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _strlen - count the length of a string
+ * _puts - prints a string
  *
  * @s: the string
  *
- * Return: the length os s
+ * Return: void
  */
 
-int _strlen(char *s)
+int _puts(char *s)
 {
 	int i, j;
 
