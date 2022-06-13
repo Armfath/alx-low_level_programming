@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* main - check the code
+* reset_to_98 - check the code
 *
 * @m: a pointer the integer we want to set to 98
 *
