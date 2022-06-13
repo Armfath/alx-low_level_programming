@@ -8,12 +8,14 @@
  * Return: void
  */
 
-int _puts(char *s)
+void _puts(char *s)
 {
-	int i, j;
+	int i;
 
-	j = 0;
-	for (i = 0 ; s[i] == '\0' ; i++)
-		j++;
-	return (j);
+	i = 0;
+	while (s[i] == '\0')
+	{
+		_putchar(s[i]);
+		i++;
+	}
 }
