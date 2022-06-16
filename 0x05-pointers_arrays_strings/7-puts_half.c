@@ -1,19 +1,34 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _strlen - count the length of a string
+ * puts_half - update value.
  *
- * @s: the string
+ *@str: value to be evaluate.
  *
- * Return: the length os s
- */
+ * Return: not.
+*/
 
-int _strlen(char *s)
+void puts_half(char *str)
 {
-	int i, j;
+	int len = 0;
+	char *y = str;
+	int n;
 
-	j = 0;
-	for (i = 0 ; s[i] == '\0' ; i++)
-		j++;
-	return (j);
+	while (*y != '\0')
+	{
+		y++;
+		len++;
+	}
+	if (len % 2 == 0)
+	{
+		n = len / 2;
+	}
+	else
+	{
+		n = (len + 1) / 2;
+	}
+	for ( ; n < len ; n++)
+		_putchar(str[n]);
+	_putchar('\n');
 }
