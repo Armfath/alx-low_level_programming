@@ -1,19 +1,31 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _strlen - count the length of a string
- *
- * @s: the string
- *
- * Return: the length os s
- */
+* puts2 - print pair values.
+*
+* @str: value to be evaluate.
+*
+* Return: not.
+*/
 
-int _strlen(char *s)
+void puts2(char *str)
 {
-	int i, j;
+	int len = 0;
+	int l = 0;
+	char *y = str;
+	int z;
 
-	j = 0;
-	for (i = 0 ; s[i] == '\0' ; i++)
-		j++;
-	return (j);
+	while (*y != '\0')
+	{
+		y++;
+		len++;
+	}
+	l = len - 1;
+	for (z = 0 ; z <= l ; z++)
+	{
+		if (z % 2 == 0)
+			_putchar(str[z]);
+	}
+	_putchar('\n');
 }
