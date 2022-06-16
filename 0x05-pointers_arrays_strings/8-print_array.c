@@ -1,19 +1,24 @@
+#include<stdio.h>
 #include "main.h"
 
 /**
- * _strlen - count the length of a string
+ * print_array - update value.
  *
- * @s: the string
+ * @a: value to be evaluate.
+ * @n: value to be evaluate.
  *
- * Return: the length os s
+ * Return: not.
  */
 
-int _strlen(char *s)
+void print_array(int *a, int n)
 {
-	int i, j;
+	int x;
 
-	j = 0;
-	for (i = 0 ; s[i] == '\0' ; i++)
-		j++;
-	return (j);
+	for (x = 0 ; x < n; x++)
+	{
+		printf("%d", a[x]);
+		if (x != n - 1)
+			printf(", ");
+	}
+	printf("\n");
 }
