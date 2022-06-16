@@ -1,19 +1,24 @@
+#include<stdio.h>
 #include "main.h"
 
 /**
- * _strlen - count the length of a string
+ * _strcpy - update value.
  *
- * @s: the string
+ * @dest: value to be evaluate
+ * @src: value to be evaluate
  *
- * Return: the length os s
+ * Return: not
  */
 
-int _strlen(char *s)
+char *_strcpy(char *dest, char *src)
 {
-	int i, j;
+	int l = 0;
+	int x = 0;
 
-	j = 0;
-	for (i = 0 ; s[i] == '\0' ; i++)
-		j++;
-	return (j);
+	while (*(src + l) != '\0')
+		l++;
+	for ( ; x < l ; x++)
+		dest[x] = src[x];
+	dest[l] = '\0';
+	return (dest);
 }
