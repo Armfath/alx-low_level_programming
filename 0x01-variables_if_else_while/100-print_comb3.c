@@ -1,30 +1,35 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
-* main - Print combinations of two digit numbers
-*
-* Return: Always 0 (Success)
-*/
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
-  int tens;
-  int ones;
+	int d, p;
 
-  for (tens = 0; tens <= 9; tens++)
-    {
-      for (ones = tens + 1; ones <= 9; ones++)
+	for (d = '0'; d < '9'; d++)
 	{
-	  putchar(tens + '0');
-	  putchar(ones + '0');
+		for (p = d + 1; p <= '9'; p++)
+		{
+			if (p != d)
+			{
+				putchar(d);
+				putchar(p);
 
-	  if (tens < 8)
-	    {
-	      putchar(',');
-	      putchar(' ');
-	    }
+				if (d == '8' && p == '9')
+					continue;
+
+				putchar(',');
+				putchar(' ');
+			}
+		}
 	}
-    }
-  putchar('\n');
+	putchar('\n');
 
-  return (0);
+	return (0);
 }
