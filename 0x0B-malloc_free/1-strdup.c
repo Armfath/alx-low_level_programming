@@ -7,17 +7,20 @@
  */
 char *_strdup(char *str)
 {
-	unsigned long int i;
-	char *s;
+	char *strDup;
+	int len, i;
 
-	s = malloc(sizeof(str));
-	if (s == NULL)
-	{
+	if (str == NULL)
 		return (NULL);
-	}
-	for (i = 0; i < sizeof(str); i++)
+	len = 0;
+	while (str[len] != 0)
+		len++;
+	strDup = malloc(sizeof(*str) * (len + 1));
+	if (strDup == NULL)
+		return (NULL);
+	for (i = 0; i < len; i++)
 	{
-		s[i] = str[i];
+		strDup[i] = str[i];
 	}
-	return (s);
+	return (strDup);
 }
