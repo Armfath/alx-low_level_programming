@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include "dog.h"
 /**
  * new_dog - create a dog infos
@@ -16,6 +15,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	n_dog = malloc(sizeof(dog_t));
 	if (!n_dog)
 	{
+		free(n_dog);
 		return (NULL);
 	}
 	n_dog->name = name;
