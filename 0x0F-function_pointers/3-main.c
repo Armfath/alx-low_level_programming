@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 
 	if (argc != 4)
 	{
-		printf("Error(98)\n");
+		printf("Error\n");
 		exit(98);
 	}
 	num1 = atoi(argv[1]);
@@ -23,12 +23,12 @@ int main(int argc, char **argv)
 	calculor = get_op_func(operator);
 	if (!calculor || strlen(operator) != 1)
 	{
-		printf("Error(99)\n");
+		printf("Error\n");
 		exit(99);
 	}
 	if ((operator[0] == '/' || operator[0] == '%') && num2 == 0)
 	{
-		printf("Error(100)\n");
+		printf("Error\n");
 		exit(100);
 	}
 	calc = calculor(num1, num2);
