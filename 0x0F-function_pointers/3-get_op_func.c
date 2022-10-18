@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "calc.h"
+#include "3-calc.h"
 /**
  * get_op_func - slect the right op func
  * @s: operator give

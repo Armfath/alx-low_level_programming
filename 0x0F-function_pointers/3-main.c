@@ -1,4 +1,4 @@
-#include "calc.h"
+#include "3-calc.h"
 /**
  * main - make an operation between two numbers
  * @argc: number of arguments passed
