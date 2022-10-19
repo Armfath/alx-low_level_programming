@@ -4,7 +4,6 @@
 void print_all(const char * const format, ...)
 {
 	int i, n = 0;
-	char *str;
 	va_list arg_p;
 
 	va_start(arg_p, format);
