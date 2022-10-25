@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * listint_len - print int from listst
+ * listint_len - count node in listst
  * @h: head of the list
  *
  * Return: num of the node in the list
