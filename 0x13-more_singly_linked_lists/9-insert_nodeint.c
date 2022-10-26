@@ -5,7 +5,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
     listint_t *h;
     listint_t *before;
     listint_t *after;
-    int num_node = 0, i;
+    unsigned int num_node = 0, i;
 
     h = *head;
     while (h->next != NULL)
