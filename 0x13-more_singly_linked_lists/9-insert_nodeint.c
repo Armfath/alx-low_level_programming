@@ -8,7 +8,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	unsigned int num_node = 0, i;
 
 	h = *head;
-	while (h->next != NULL)
+	while (h != NULL)
 	{
 		num_node++;
 		h = h->next;
