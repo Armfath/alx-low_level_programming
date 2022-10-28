@@ -8,10 +8,10 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int set = 1;
+	unsigned long int set = 0x01;
 
 	set = ~(set << index);
-	if (set == 0)
+	if (set == 0x00)
 		return (-1);
 	*n = (*n & set);
 
