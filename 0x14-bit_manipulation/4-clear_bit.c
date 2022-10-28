@@ -13,7 +13,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	set = ~(set << index);
 	if (set == 0x00)
 		return (-1);
-	*n = (*n & set);
+	*n &= set;
 
 	return (1);
 }
