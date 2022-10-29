@@ -20,7 +20,6 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 			{
-				printf("s[%d] = %c || a[%d] = %c\n", i, s[i], j, accept[j]);
 				exist = 1;
 				break;
 			}
