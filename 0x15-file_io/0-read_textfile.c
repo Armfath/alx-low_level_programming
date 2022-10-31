@@ -9,24 +9,34 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
+	int fdo, fdr, fdw;
 	char *buf;
-	long unsigned int n;
 
 	if (filename == NULL)
 	{
 		return (0);
 	}
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
+	fdo = open(filename, O_RDONLY);
+	if (fdo < 0)
 	{
 		return (0);
 	}
 	buf = malloc(sizeof(char) * letters);
-	n = read(fd, buf, letters);
-	buf[letters] = '\0';
-	printf("OKKKK");
-
+	if (buf == NULL)
+	{
+		free(buf);
+		return (0);
+	}
+	fdr = read(fdo, buf, letters);
+	if (fdr < 0)
+	{
+		free(buf);
+		return (0);
+	}
+	fdw = write(STDOUT_FILENO, buf, fdr);
 	free(buf);
-	return (n);
+	close(fdo);
+	if (fdw < 0)
+		return (0);
+	return (fdw);
 }
