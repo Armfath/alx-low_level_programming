@@ -25,8 +25,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buf = malloc(sizeof(char) * letters);
 	n = read(fd, buf, letters);
 	buf[letters] = '\0';
-	printf("%ld\n%s", n, buf);
+	printf("OKKKK", buf);
 
-/* 	free(buf);
- */	return (n);
+	free(buf);
+	return (n);
 }
