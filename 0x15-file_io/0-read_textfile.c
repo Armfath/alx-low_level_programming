@@ -23,5 +23,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buf[letters + 1] = '\0';
 	printf("%s", buf);
 
+	free(buf);
 	return (n);
 }
