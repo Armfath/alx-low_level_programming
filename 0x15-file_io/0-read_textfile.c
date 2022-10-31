@@ -15,18 +15,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (filename == NULL)
 	{
-		printf("ok");
 		return (0);
 	}
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 	{
-		printf("ok");
 		return (0);
 	}
 	buf = malloc(sizeof(char) * letters + 1);
 	n = read(fd, buf, letters);
-	if (n != letters)
+	if (n < letters)
 		return (0);
 	buf[letters + 1] = '\0';
 	printf("%s", buf);
