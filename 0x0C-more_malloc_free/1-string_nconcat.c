@@ -22,13 +22,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	}
 	len1 = strlen(s1);
+	printf("len1 = %u\n", len1);
 	len2 = strlen(s2);
+	printf("len2 = %u\n", len2);
 	if (len2 < n)
 	{
 		n = len2;
 	}
+	printf("n = %u\n", n);
 	len = len1 + n;
-	s = malloc(sizeof(char) * len);
+	printf("len = %u\n", len);
+	s = malloc(sizeof(char) * (len));
 	if (s == NULL)
 	{
 		free(s);
