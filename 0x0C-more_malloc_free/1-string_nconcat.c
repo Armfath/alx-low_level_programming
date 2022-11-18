@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * string_nconcat
+ * string_nconcat - concat two string
  *
  * @s1: str1
  * @s2: str2
  * @n: num of bites
  *
- * Return: 
+ * Return: pointer to the newly string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -17,7 +17,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
-	
 	len1 = strlen(s1);
 	len2 = strlen(s2);
 	if (len2 < n)
