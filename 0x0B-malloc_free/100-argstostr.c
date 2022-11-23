@@ -30,7 +30,6 @@ char *argstostr(int ac, char **av)
 	{
 		for (j = 0; j < (int)strlen(av[i]); j++)
 		{
-			printf("l = %d\n", l);
 			s[l] = av[i][j];
 			l++;
 		}
