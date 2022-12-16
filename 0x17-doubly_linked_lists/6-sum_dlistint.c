@@ -20,9 +20,9 @@ int sum_dlistint(dlistint_t *head)
 	}
 	while (head)
 	{
-		head = head->next;
 		if (head)
 			sum += head->n;
+		head = head->next;
 	}
 	return (sum);
 }
