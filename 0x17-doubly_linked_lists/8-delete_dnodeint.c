@@ -5,7 +5,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	int i = -1;
 
 	temp = (*head);
-	/* printf("temp->n = %d", temp->n); */
 	while (temp)
 	{
 		temp = temp->next;
@@ -30,7 +29,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if ((int)index == i)
 	{
 		temp = (*head);
-		for (; index > 0; index--)
+		for (; index > 1; index--)
 			temp = temp->next;
 		next = temp->next;
 		temp->next = NULL;
@@ -45,5 +44,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	temp->next = next;
 	next->prev = temp;
 	free(curr);
+
 	return (1);
 }
