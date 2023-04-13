@@ -13,9 +13,7 @@ void print_arr(int *arr, size_t start, size_t end)
 	size_t i;
 
 	for (i = start; i < end; i++)
-	{
 		(i != end - 1) ? printf("%d, ", arr[i]) : printf("%d", arr[i]);
-	}
 	printf("\n");
 }
 
@@ -39,7 +37,7 @@ int binary_search(int *array, size_t size, int value)
 
 	printf("Searching in array: ");
 	print_arr(array, st, end);
-	while (st < end - 1)
+	while (st < end)
 	{
 		mid  = (st + end - 1) / 2;
 		if (array[mid] > value)
